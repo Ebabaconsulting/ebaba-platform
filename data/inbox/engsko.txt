@@ -1,0 +1,17 @@
+Company: Engsko A/S
+Industry: Industrial Manufacturing
+Sub-industry: Millstones & Milling Technology
+HQ Country: DK
+Regions: EMEA, North America, APAC, Africa
+Revenue band: 10-50M
+Employees: 50-250
+Contact name: Jens Andersen
+Contact role: Chief Executive Officer
+Email: jens.andersen@engsko.example
+Engagement type: tech-transformation
+Scope: Modernize legacy millstone production lines, embed digital monitoring across milling equipment, and design a global export expansion playbook targeting niche distributors.
+Timeline weeks: 20
+Budget band: 250K-1M
+Strategic priorities: Modernizing production operations, Expanding global export markets, Embedding digital monitoring into traditional milling equipment
+Pain points: Legacy manufacturing bottlenecks, Rising raw material costs, Difficulty identifying niche international distributors
+Success metrics: 20% throughput uplift on modernized lines, 15% reduction in unit production cost, 3 new export-market distributor partnerships secured
