@@ -1,0 +1,71 @@
+{
+  "_comment": "ebabaConsulting market report section configuration. Per the v1 plan, 'M&A Activity' lives under Competitive Moves and 'Talent & Skills' lives under Macro Drivers.",
+  "sections": [
+    {
+      "key": "macro_drivers",
+      "title": "Macro Drivers",
+      "keywords": [
+        "macro", "economy", "inflation", "interest rate", "gdp",
+        "geopolit", "supply chain", "currency",
+        "talent", "skills", "labor", "workforce", "hiring"
+      ],
+      "sub_topics": ["Talent & Skills"]
+    },
+    {
+      "key": "demand_signals",
+      "title": "Demand Signals",
+      "keywords": [
+        "demand", "customer", "consumer", "adoption",
+        "spend", "pipeline", "bookings", "churn"
+      ],
+      "sub_topics": []
+    },
+    {
+      "key": "competitive_moves",
+      "title": "Competitive Landscape",
+      "keywords": [
+        "competitor", "market share", "launch", "product", "pricing",
+        "partnership", "alliance",
+        "acquir", "merger", "m&a", "divest", "buyout", "ipo"
+      ],
+      "sub_topics": ["M&A Activity"]
+    },
+    {
+      "key": "regulatory",
+      "title": "Regulatory & Policy",
+      "keywords": [
+        "regulat", "policy", "compliance", "law", "directive",
+        "sanction", "tariff", "tax", "antitrust", "ai act"
+      ],
+      "sub_topics": []
+    },
+    {
+      "key": "technology",
+      "title": "Technology & Innovation",
+      "keywords": [
+        "ai", "artificial intelligence", "genai", "llm",
+        "automation", "cloud", "data", "platform",
+        "cyber", "security", "blockchain", "quantum"
+      ],
+      "sub_topics": []
+    },
+    {
+      "key": "risks",
+      "title": "Key Risks",
+      "keywords": [
+        "risk", "threat", "downturn", "disruption",
+        "shortage", "volatility", "exposure"
+      ],
+      "sub_topics": []
+    },
+    {
+      "key": "implications",
+      "title": "Strategic Implications for Clients",
+      "keywords": [
+        "implication", "opportunity", "recommendation",
+        "imperative", "priority", "action"
+      ],
+      "sub_topics": []
+    }
+  ]
+}

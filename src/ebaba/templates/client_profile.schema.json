@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ebabaconsulting.local/schemas/client_profile.schema.json",
+  "title": "ClientProfile",
+  "description": "Executive client intake profile used by ebabaConsulting engagements.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "client_id",
+    "company_name",
+    "industry",
+    "hq_country",
+    "primary_contact",
+    "engagement",
+    "derived",
+    "metadata"
+  ],
+  "properties": {
+    "client_id": { "type": "string", "minLength": 1 },
+    "company_name": { "type": "string", "minLength": 1 },
+    "industry": { "type": "string", "minLength": 1 },
+    "sub_industry": { "type": ["string", "null"] },
+    "hq_country": { "type": "string", "minLength": 2, "maxLength": 2 },
+    "regions_active": { "type": "array", "items": { "type": "string" } },
+    "revenue_band_usd": {
+      "type": "string",
+      "enum": ["<10M", "10-50M", "50-250M", "250M-1B", "1-5B", ">5B", "undisclosed"]
+    },
+    "employee_band": {
+      "type": "string",
+      "enum": ["<50", "50-250", "250-1000", "1000-5000", ">5000", "undisclosed"]
+    },
+    "primary_contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "role"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "email": { "type": ["string", "null"], "format": "email" }
+      }
+    },
+    "engagement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "scope", "timeline_weeks", "budget_band_usd"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "strategy",
+            "operational-excellence",
+            "tech-transformation",
+            "diagnostic",
+            "advisory"
+          ]
+        },
+        "scope": { "type": "string", "minLength": 1 },
+        "timeline_weeks": { "type": "integer", "minimum": 1, "maximum": 104 },
+        "budget_band_usd": {
+          "type": "string",
+          "enum": ["<50K", "50-250K", "250K-1M", "1-5M", ">5M", "undisclosed"]
+        }
+      }
+    },
+    "strategic_priorities": { "type": "array", "items": { "type": "string" } },
+    "pain_points": { "type": "array", "items": { "type": "string" } },
+    "success_metrics": { "type": "array", "items": { "type": "string" } },
+    "derived": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["engagement_tier", "priority_score", "recommended_practice_area"],
+      "properties": {
+        "engagement_tier": { "type": "string", "enum": ["Tier 1", "Tier 2", "Tier 3"] },
+        "priority_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "recommended_practice_area": {
+          "type": "string",
+          "enum": [
+            "Strategy",
+            "Operational Excellence",
+            "Tech Transformation",
+            "Cross-Practice"
+          ]
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "source", "intake_version"],
+      "properties": {
+        "created_at": { "type": "string" },
+        "source": { "type": "string" },
+        "intake_version": { "type": "string" }
+      }
+    }
+  }
+}

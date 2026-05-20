@@ -1,0 +1,28 @@
+# {{ industry | title }} — Executive Market Brief
+_Date: {{ date }}  •  Prepared by ebabaConsulting_
+
+## Executive Summary
+
+{{ executive_summary }}
+{% for section in sections %}
+
+## {{ section['title'] }}
+
+{% if section['items'] %}
+{% for item in section['items'] %}
+- **{{ item['headline'] }}**{{ (' — ' ~ item['detail']) if item['detail'] else '' }}{{ (' _(source: ' ~ item['source'] ~ ')_') if item['source'] else '' }}
+{% endfor %}
+{% else %}
+_No material signals captured for this section._
+{% endif %}
+{% endfor %}
+
+## Appendix — Sources
+
+{% if sources %}
+{% for src in sources %}
+- {{ src }}
+{% endfor %}
+{% else %}
+_No sources catalogued._
+{% endif %}

@@ -1,0 +1,17 @@
+Company: Acme Industrial Holdings
+Industry: Industrial Manufacturing
+Sub-industry: Heavy Equipment
+HQ Country: DE
+Regions: EMEA, North America, APAC
+Revenue band: 1-5B
+Employees: 1000-5000
+Contact name: Helena Vogt
+Contact role: Chief Strategy Officer
+Email: helena.vogt@acme.example
+Engagement type: strategy
+Scope: Three-year corporate strategy refresh and portfolio rationalization
+Timeline weeks: 16
+Budget band: 1-5M
+Strategic priorities: Portfolio simplification, EBITDA expansion, Digital after-sales
+Pain points: Margin compression, Legacy ERP fragmentation, Talent attrition in engineering
+Success metrics: +300bps EBITDA, 25% reduction in SKUs, NPS > 60
