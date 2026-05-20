@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ebaba"
+version = "0.1.0"
+description = "ebabaConsulting foundational toolkit: client intake and market analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "ebabaConsulting" }]
+license = { text = "Proprietary" }
+dependencies = [
+    "pydantic[email]>=2.6",
+    "typer>=0.12",
+    "jinja2>=3.1",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+ebaba-intake = "ebaba.tools.client_intake:app"
+ebaba-market = "ebaba.tools.market_analyzer:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"ebaba.templates" = ["*.j2", "*.json", "*.yaml"]
